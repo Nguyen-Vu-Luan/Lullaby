@@ -1,0 +1,106 @@
+.gallery-section {
+  padding: 20px 0;
+  padding-bottom: 40px;
+  background: #917f6a;
+  text-align: center;
+}
+.section-head h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.section-head p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.fadeshow {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Ẩn radio */
+.fadeshow input { display: none; }
+
+/* Slides */
+.fs-slides {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.fs-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+/* Gán ảnh cho từng slide */
+.slide1 { background-image: url(../images/gallery1.jpg); }
+.slide2 { background-image: url(../images/gallery2.jpg); }
+.slide3 { background-image: url(../images/gallery3.jpg); }
+.slide4 { background-image: url(../images/gallery4.jpg); }
+.slide5 { background-image: url(../images/gallery5.jpg); }
+.slide6 { background-image: url(../images/gallery6.jpg); }
+.slide7 { background-image: url(../images/gallery7.jpg); }
+.slide8 { background-image: url(../images/gallery8.jpg); }
+.slide9 { background-image: url(../images/gallery9.jpg); }
+
+/* Khi radio được chọn thì slide tương ứng hiện */
+#img1:checked ~ .fs-slides .slide1 { opacity: 1; }
+#img2:checked ~ .fs-slides .slide2 { opacity: 1; }
+#img3:checked ~ .fs-slides .slide3 { opacity: 1; }
+#img4:checked ~ .fs-slides .slide4 { opacity: 1; }
+#img5:checked ~ .fs-slides .slide5 { opacity: 1; }
+#img6:checked ~ .fs-slides .slide6 { opacity: 1; }
+#img7:checked ~ .fs-slides .slide7 { opacity: 1; }
+#img8:checked ~ .fs-slides .slide8 { opacity: 1; }
+#img9:checked ~ .fs-slides .slide9 { opacity: 1; }
+
+/* Quick nav (chấm tròn) */
+.fs-quick-nav {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.fs-quick-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#img1:checked ~ .fs-quick-nav label[for="img1"],
+#img2:checked ~ .fs-quick-nav label[for="img2"],
+#img3:checked ~ .fs-quick-nav label[for="img3"],
+#img4:checked ~ .fs-quick-nav label[for="img4"],
+#img5:checked ~ .fs-quick-nav label[for="img5"],
+#img6:checked ~ .fs-quick-nav label[for="img6"],
+#img7:checked ~ .fs-quick-nav label[for="img7"],
+#img8:checked ~ .fs-quick-nav label[for="img8"],
+#img9:checked ~ .fs-quick-nav label[for="img9"] {
+  background: #917f6a;
+}

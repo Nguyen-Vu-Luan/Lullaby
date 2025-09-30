@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lullaby Homestay</title>
+    <link rel="icon" href="./images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/choose.css">
+    <link rel="stylesheet" href="./css/homestay.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+    <link rel="stylesheet" href="./css/review.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/booking.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#home"><img src="./images/logo.png" alt="logo" height="75" width="175"></a>
+        <ul class="nav-links">
+            <li><a href="#home">TRANG CHỦ</a></li>
+            <li><a href="#about">GIỚI THIỆU</a></li>
+            <li><a href="#homestay">HOMESTAY</a></li>
+            <li><a href="#gallery">HÌNH ẢNH</a></li>
+            <li><a href="#reviews">KHÁCH HÀNG</a></li>
+            <li><a href="#contact">LIÊN HỆ</a></li>
+            <li><a href="javascript:void(0)" id="openBooking" class="btn">ĐẶT PHÒNG</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="./images/home1.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./images/home2.png" style="width:100%">
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h3>
+                <span style="font-size: 100%;">Lullaby Homestay</span>
+            </h3>
+            <h2>
+                <span class="uppercase" style="text-align: center; color: rgba(145, 127, 106, 1);">Điểm Đến Lý Tưởng Cho
+                    Kỳ Nghỉ Dưỡng</span>
+            </h2>
+            <p style="text-align: justify;" data-start="82" data-end="474">Lullaby Homestay là một hệ thống homestay lý
+                tưởng
+                cho những ai mong muốn tìm kiếm một không gian nghỉ dưỡng ấm cúng, gần gũi và đầy đủ tiện nghi. Với
+                những cơ
+                sở được phân bố tại các vị trí đắc địa, <strong>Lullaby Homestay</strong> mang đến cho du khách những
+                trải
+                nghiệm tuyệt vời, giúp họ thư giãn và tận hưởng không khí trong lành của thiên nhiên, đồng thời khám phá
+                vẻ
+                đẹp văn hóa đặc sắc của từng địa phương.</p>
+            <p style="text-align: justify;" data-start="476" data-end="922">Mỗi homestay của <strong>Lullaby</strong>
+                được
+                thiết kế theo phong cách đơn giản nhưng đầy tinh tế, tạo cảm giác ấm áp và thân thuộc như chính ngôi nhà
+                của
+                bạn. Không gian được bài trí gọn gàng, hài hòa với những vật dụng tiện nghi, mang đến sự thoải mái và dễ
+                chịu cho mỗi du khách. Từ những phòng ngủ thoáng mát đến các khu vực sinh hoạt chung đầy ấm cúng,
+                <strong>Lullaby Homestay</strong> là nơi lý tưởng để bạn nghỉ ngơi, thư giãn và phục hồi năng lượng sau
+                những
+                ngày dài bận rộn.
+            </p>
+            <p style="text-align: justify;" data-start="924" data-end="1225">Với đội ngũ nhân viên tận tâm, luôn sẵn
+                sàng
+                đáp ứng mọi yêu cầu và mong muốn của du khách. Dịch vụ chu đáo và các tiện ích đầy đủ, từ wifi miễn phí,
+                bữa
+                sáng ngon miệng đến các hoạt động thú vị quanh khu vực, tất cả đều tạo nên một trải nghiệm nghỉ dưỡng
+                đáng
+                nhớ.</p>
+            <p style="text-align: justify;" data-start="1227" data-end="1472" data-is-last-node="" data-is-only-node="">
+                Với
+                mục tiêu mang đến một kỳ nghỉ trọn vẹn, <strong>Lullaby Homestay</strong> là lựa chọn lý tưởng cho những
+                ai
+                muốn khám phá vẻ đẹp của thiên nhiên, văn hóa và con người tại các vùng đất mới, đồng thời tận hưởng sự
+                thoải mái, dễ chịu như ở chính ngôi nhà của mình.</p>
+        </div>
+        <div class="about-image">
+            <img src="./images/about.png" alt="LaLa Homestay" width="1350" height="1350">
+        </div>
+    </section>
+
+    <!-- WHYCHOOSE -->
+    <div id="why-section"></div>
+    <script>
+        fetch("html/section-why.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("why-section").innerHTML = data;
+            });
+    </script>
+
+    <!-- HOMESTAY -->
+    <section id="homestay" class="homestay-section">
+        <div class="section-head">
+            <h2><span>HỆ THỐNG LULLABY HOMESTAY</span></h2>
+            <p><span>Chọn ngay không gian phù hợp cho kỳ nghỉ của bạn tại Huế</span></p>
+        </div>
+
+        <div class="homestay-grid">
+            <!-- Homestay 1 -->
+            <div class="homestay-card">
+                <div class="homestay-img">
+                    <img src="./images/lalahomestay.jpg" alt="LALA HOMESTAY">
+                </div>
+                <div class="homestay-info">
+                    <h3>LULLABY HOMESTAY</h3>
+                    <p>09 Phong Châu, P. Phú Nhuận, Tp. Huế</p>
+                    <a href="https://zalo.me/0342138753" class="btn-zalo">Đặt phòng qua Zalo</a>
+                </div>
+            </div>
+
+            <!-- Homestay 2 -->
+            <div class="homestay-card">
+                <div class="homestay-img">
+                    <img src="./images/lalacitadel.jpg" alt="LALA CITADEL">
+                </div>
+                <div class="homestay-info">
+                    <h3>LULLABY CITADEL</h3>
+                    <p>11/78 Mai Thúc Loan, P. Thuận Lộc, Tp Huế</p>
+                    <a href="https://zalo.me/0342138753" class="btn-zalo">Đặt phòng qua Zalo</a>
+                </div>
+            </div>
+
+            <!-- Homestay 3 -->
+            <div class="homestay-card">
+                <div class="homestay-img">
+                    <img src="./images/lalavilla.jpg" alt="LALA VILLA">
+                </div>
+                <div class="homestay-info">
+                    <h3>LULLABY VILLA</h3>
+                    <p>15 đường số 8, KĐT An Cựu City, P. An Đông</p>
+                    <a href="https://zalo.me/0342138753" class="btn-zalo">Đặt phòng qua Zalo</a>
+                </div>
+            </div>
+
+            <!-- Homestay 4 -->
+            <div class="homestay-card">
+                <div class="homestay-img">
+                    <img src="./images/lalapenhouse1.jpg" alt="LALA PENHOUSE 1">
+                </div>
+                <div class="homestay-info">
+                    <h3>LULLABY PENHOUSE 1</h3>
+                    <p>KĐT Manor Crown, P. Xuân Phú, Tp Huế</p>
+                    <a href="https://zalo.me/0342138753" class="btn-zalo">Đặt phòng qua Zalo</a>
+                </div>
+            </div>
+
+            <!-- Homestay 5 -->
+            <div class="homestay-card">
+                <div class="homestay-img">
+                    <img src="./images/lalapenhouse2.jpg" alt="LALA PENHOUSE 2">
+                </div>
+                <div class="homestay-info">
+                    <h3>LULLABY PENHOUSE 2</h3>
+                    <p>KĐT Manor Crown, P. Xuân Phú, Tp Huế</p>
+                    <a href="https://zalo.me/0342138753" class="btn-zalo">Đặt phòng qua Zalo</a>
+                </div>
+            </div>
+
+            <!-- Homestay 6 -->
+            <div class="homestay-card">
+                <div class="homestay-img">
+                    <img src="./images/lalamanor.jpg" alt="LALA MANOR">
+                </div>
+                <div class="homestay-info">
+                    <h3>LULLABY MANOR</h3>
+                    <p>KĐT Manor Crown, P. Xuân Phú, Tp Huế</p>
+                    <a href="https://zalo.me/0342138753" class="btn-zalo">Đặt phòng qua Zalo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-head">
+            <h2><span>HÌNH ẢNH</span></h2>
+            <p><span>Mỗi góc nhỏ tại Lullaby Homestay đều được chăm chút tỉ mỉ, tạo nên không gian ấm cúng, giúp bạn lưu
+                    giữ những khoảnh khắc tuyệt vời trong chuyến đi của mình.</span></p>
+        </div>
+        <div class="fadeshow">
+            <!-- Radio (9 cái) -->
+            <input type="radio" name="css-fadeshow" id="img1" checked />
+            <input type="radio" name="css-fadeshow" id="img2" />
+            <input type="radio" name="css-fadeshow" id="img3" />
+            <input type="radio" name="css-fadeshow" id="img4" />
+            <input type="radio" name="css-fadeshow" id="img5" />
+            <input type="radio" name="css-fadeshow" id="img6" />
+            <input type="radio" name="css-fadeshow" id="img7" />
+            <input type="radio" name="css-fadeshow" id="img8" />
+            <input type="radio" name="css-fadeshow" id="img9" />
+
+            <!-- Slides (9 cái) -->
+            <div class="fs-slides">
+                <div class="fs-slide slide1"></div>
+                <div class="fs-slide slide2"></div>
+                <div class="fs-slide slide3"></div>
+                <div class="fs-slide slide4"></div>
+                <div class="fs-slide slide5"></div>
+                <div class="fs-slide slide6"></div>
+                <div class="fs-slide slide7"></div>
+                <div class="fs-slide slide8"></div>
+                <div class="fs-slide slide9"></div>
+            </div>
+
+            <!-- Quick Navigation (9 cái) -->
+            <div class="fs-quick-nav">
+                <label for="img1" class="fs-quick-btn"></label>
+                <label for="img2" class="fs-quick-btn"></label>
+                <label for="img3" class="fs-quick-btn"></label>
+                <label for="img4" class="fs-quick-btn"></label>
+                <label for="img5" class="fs-quick-btn"></label>
+                <label for="img6" class="fs-quick-btn"></label>
+                <label for="img7" class="fs-quick-btn"></label>
+                <label for="img8" class="fs-quick-btn"></label>
+                <label for="img9" class="fs-quick-btn"></label>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews">
+        <h2>ĐÁNH GIÁ KHÁCH HÀNG</h2>
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-bc6cf0ca-a76f-4d54-aa49-518c6ce250de" data-elfsight-app-lazy></div>
+    </section>
+
+    <!-- Liên hệ -->
+    <section id="contact" class="contact-section">
+        <h2>THÔNG TIN LIÊN HỆ</h2>
+        <div class="contact-container">
+            <!-- Cột trái: Thông tin liên hệ + ảnh -->
+            <div class="contact-info">
+                <ul class="info-list">
+                    <li><i class="fa-solid fa-location-dot"></i> <strong>Địa chỉ:</strong> 09 Phong Châu, P. Phú Hội, Q. Thành Phố, Tp Huế</li>
+                    <li><i class="fa-solid fa-phone"></i> <strong>Điện thoại:</strong> <a href="tel:0909455107">0909455107</a></li>
+                    <li><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a
+                            href="mailto:thienvisanggroupjsc@gmail.com">thienvisanggroupjsc@gmail.com</a></li>
+                    <li><i class="fa-brands fa-facebook"></i> <strong>Facebook:</strong> <a href="https://facebook.com/lalahomestay" target="_blank">Lullaby
+                            Homestay</a></li>
+                    <li><i class="fa-brands fa-instagram"></i> <strong>Instagram:</strong> <a href="https://instagram.com/lalahomestay"
+                            target="_blank">@lullabyhomestay</a></li>
+                    <li><i class="fa-brands fa-tiktok"></i> <strong>TikTok:</strong> <a href="https://tiktok.com/@lalahomestay"
+                            target="_blank">@lullabyhomestay</a></li>
+                </ul>
+
+                <!-- Ảnh homestay -->
+                <div class="contact-gallery">
+                    <img src="./images/contact.jpg" alt="Phòng ngủ LaLa Homestay">
+                </div>
+            </div>
+            <!-- Cột phải: Bản đồ -->
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps?q=09+Phong+Châu,+P.+Phú+Hội,+Q.+Thuận+Hoá,+Tp+Huế&output=embed"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING -->
+    <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>ĐẶT PHÒNG TRỰC TUYẾN</h2>
+      <form id="bookingForm" class="booking-form">
+        <input type="text" name="name" placeholder="Tên của bạn" required>
+        <input type="tel" name="phone" placeholder="Số điện thoại của bạn" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="date" name="checkin" required>
+        <input type="date" name="checkout" required>
+        <input type="number" name="people" min="1" placeholder="Số người" required>
+        <select name="room" required>
+          <option value="">Loại homestay</option>
+          <option>Lala Homestay</option>
+          <option>Lala Citadel</option>
+          <option>Lala Villa</option>
+          <option>Lala Manor</option>
+        </select>
+        <button type="submit" class="btn-submit">GỬI ĐI</button>
+      </form>
+    </div>
+  </div>
+<footer class="site-footer">
+    <div class="footer-container">
+        <p>&copy; 2025 Lullaby Homestay. All rights reserved.</p>
+        <p>
+            Liên hệ: <a href="mailto:ttnduyen1204@gmail.com">ttnduyen1204@gmail.com</a> |
+            Điện thoại: 0123 456 789
+        </p>
+        <div class="social-links">
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Zalo</a>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/gallery.js"></script>
+    <script src="./js/booking.js"></script>
+</body>
+
+</html>

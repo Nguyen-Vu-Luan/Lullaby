@@ -1,0 +1,84 @@
+:root {
+    --primary: #4CAF50;
+    --accent: #917f6a;
+    --bg: #fefefe;
+    --text: #333;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: aliceblue;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--accent);
+}
+
+input,
+textarea,
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .banner-content h1 {
+        font-size: 28px;
+    }
+
+    .card-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
